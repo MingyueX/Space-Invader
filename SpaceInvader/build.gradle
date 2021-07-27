@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.8'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // other libraries could be placed here e.g. unit testing framework
+    // testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(15))
+    }
+}
+
+application {
+    mainClassName = 'SpaceInvader'
+}
+
+javafx {
+    version = "11.0.2"
+    modules = ['javafx.controls', 'javafx.fxml', 'javafx.graphics', 'javafx.media']
+}
